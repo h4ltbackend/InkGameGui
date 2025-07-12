@@ -43,6 +43,9 @@ local HomeSection = HomeTag:CreateSection("Main")
 local GameTab = Window:CreateTab("Game", nil) -- Title, Image
 local GameSection = GameTab:CreateSection("Dead")
 
+local OpTab = Window:CreateTab("Op", nil) -- Title, Image
+local OpSection = Optab:CreateSection("Op")
+
 Rayfield:Notify({
    Title = "Script Loaded",
    Content = "Press K to disable the gui",
@@ -81,6 +84,19 @@ local Button = GameTab:CreateButton({
    Name = "Go Back To Lobby (Works as server hopper)",
    Callback = function()
    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ReturnToLobby"):FireServer()
+
+   end,
+})
+
+local Button = OpTab:CreateButton({
+   Name = "Register (Go to circle)",
+   Callback = function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(196.713303, 54.4803085, -21.3241825, -0.999626517, 1.11339077e-07, -0.0273273829, 1.11478293e-07, 1, -3.57096575e-09, 0.0273273829, -6.61604238e-09, -0.999626517)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
 
    end,
 })
