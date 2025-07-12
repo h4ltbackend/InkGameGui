@@ -121,6 +121,19 @@ local Button = OpTab:CreateButton({
    end,
 })
 
+local Button = OpTab:CreateButton({
+   Name = "Finish RedLight GreenLight",
+   Callback = function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(51.1068344, 1023.11377, 82.4971085, -0.999950826, 1.59957914e-08, -0.0099174846, 1.58701976e-08, 1, 1.27425643e-08, 0.0099174846, 1.25845458e-08, -0.999950826)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+   end,
+})
+
 local Button = TpTab:CreateButton({
    Name = "Register (Go to circle)",
    Callback = function()
