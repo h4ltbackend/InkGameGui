@@ -88,7 +88,7 @@ local Button = GameTab:CreateButton({
    end,
 })
 
-local Button = OpTab:CreateButton({
+local Button = TpTab:CreateButton({
    Name = "Register (Go to circle)",
    Callback = function()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
