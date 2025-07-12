@@ -94,7 +94,6 @@ local Button = GameTab:CreateButton({
 local Button = OpTab:CreateButton({
    Name = "Fly (Kinda weird)",
    Callback = function()
-   speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = true
    local Head = speaker.Character:WaitForChild("Head")
    Head.Anchored = true
    if CFloop then CFloop:Disconnect() end
