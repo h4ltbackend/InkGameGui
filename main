@@ -43,8 +43,8 @@ local HomeSection = HomeTag:CreateSection("Main")
 local GameTab = Window:CreateTab("Game", nil) -- Title, Image
 local GameSection = GameTab:CreateSection("Dead")
 
-local OpTab = Window:CreateTab("Op", nil) -- Title, Image
-local OpSection = Optab:CreateSection("Op")
+local TpTab = Window:CreateTab("Teleports", nil) -- Title, Image
+local TpSection = TpTab:CreateSection("Teleports")
 
 Rayfield:Notify({
    Title = "Script Loaded",
