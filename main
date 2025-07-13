@@ -44,7 +44,7 @@ local GameTab = Window:CreateTab("Game", nil) -- Title, Image
 local GameSection = GameTab:CreateSection("Dead")
 
 local OpTab = Window:CreateTab("Op", nil) -- Title, Image
-local OpSection = OpTab:CreateSection("Overpowered")
+local OpSection = OpTab:CreateSection("Anticheat Bypasser")
 
 local TpTab = Window:CreateTab("Teleports", nil) -- Title, Image
 local TpSection = TpTab:CreateSection("Teleports")
@@ -92,32 +92,9 @@ local Button = GameTab:CreateButton({
 })
 
 local Button = OpTab:CreateButton({
-   Name = "Fly (Kinda weird)",
+   Name = "Bypass AntiCheat (Maybe)",
    Callback = function()
-   local Head = speaker.Character:WaitForChild("Head")
-   Head.Anchored = true
-   if CFloop then CFloop:Disconnect() end
-   CFloop = RunService.Heartbeat:Connect(function(deltaTime)
-	   local moveDirection = speaker.Character:FindFirstChildOfClass('Humanoid').MoveDirection * (CFspeed * deltaTime)
-	   local headCFrame = Head.CFrame
-	   local cameraCFrame = workspace.CurrentCamera.CFrame
-	   local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
-	   cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
-	   local cameraPosition = cameraCFrame.Position
-	   local headPosition = headCFrame.Position
-
-	   local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
-	   Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
-   end,
-})
-
-local Button = OpTab:CreateButton({
-   Name = "Disable Fly",
-   Callback = function()
-   CFloop:Disconnect()
-   speaker.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
-   local Head = speaker.Character:WaitForChild("Head")
-   Head.Anchored = false
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/h4ltbackend/AntiCheatBypasser/refs/heads/main/main'))()
    end,
 })
 
@@ -160,7 +137,7 @@ pl.CFrame = location
    end,
 })
 
-local Button = TpTab:CreateButton({
+local Button = GameTab:CreateButton({
    Name = "Register (Go to circle)",
    Callback = function()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
