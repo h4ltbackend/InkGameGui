@@ -98,6 +98,8 @@ local Button = OpTab:CreateButton({
    end,
 })
 
+local OpSection = OpTab:CreateSection("Finish Games")
+
 local Button = OpTab:CreateButton({
    Name = "Finish RedLight GreenLight",
    Callback = function()
@@ -112,10 +114,10 @@ pl.CFrame = location
 })
 
 local Button = OpTab:CreateButton({
-   Name = "Anti Night Kill",
+   Name = "Finish Glass Bridge",
    Callback = function()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-local location = CFrame.new(198.680603, 82.953125, -93.7369232, -0.940027237, -1.00791283e-07, 0.341099322, -9.63780167e-08, 1, 2.98837257e-08, -0.341099322, -4.78295981e-09, -0.940027237)
+local location = CFrame.new(-200.473541, 520.731323, -1533.56543, 0.985059738, 4.89344476e-09, -0.172212929, -6.28171204e-09, 1, -7.51637508e-09, 0.172212929, 8.48587067e-09, 0.985059738)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 wait(0.1)
@@ -124,11 +126,13 @@ pl.CFrame = location
    end,
 })
 
+local OpSection = OpTab:CreateSection("Night War")
+
 local Button = OpTab:CreateButton({
-   Name = "Finish Glass Bridge",
+   Name = "Anti Night Kill",
    Callback = function()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-local location = CFrame.new(-200.473541, 520.731323, -1533.56543, 0.985059738, 4.89344476e-09, -0.172212929, -6.28171204e-09, 1, -7.51637508e-09, 0.172212929, 8.48587067e-09, 0.985059738)
+local location = CFrame.new(198.680603, 82.953125, -93.7369232, -0.940027237, -1.00791283e-07, 0.341099322, -9.63780167e-08, 1, 2.98837257e-08, -0.341099322, -4.78295981e-09, -0.940027237)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 wait(0.1)
