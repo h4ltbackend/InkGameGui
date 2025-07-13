@@ -98,6 +98,7 @@ local Button = OpTab:CreateButton({
    end,
 })
 
+local Divider = OpTab:CreateDivider()
 local OpSection = OpTab:CreateSection("Finish Games")
 
 local Button = OpTab:CreateButton({
@@ -126,6 +127,7 @@ pl.CFrame = location
    end,
 })
 
+local Divider = OpTab:CreateDivider()
 local OpSection = OpTab:CreateSection("Night War")
 
 local Button = OpTab:CreateButton({
