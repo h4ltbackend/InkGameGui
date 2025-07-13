@@ -110,7 +110,18 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 wait(0.1)
 pl.CFrame = location
+   end,
+})
 
+local Button = OpTab:CreateButton({
+   Name = "Finish Dalgona",
+   Callback = function()
+local args = {
+	{
+		Completed = true
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DALGONATEMPREMPTE"):FireServer(unpack(args))
    end,
 })
 
