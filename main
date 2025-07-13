@@ -37,8 +37,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local HomeTag = Window:CreateTab("Home", nil) -- Title, Image
-local HomeSection = HomeTag:CreateSection("Main")
+local HomeTag = Window:CreateTab("Player", nil) -- Title, Image
+local HomeSection = HomeTag:CreateSection("Player")
 
 local GameTab = Window:CreateTab("Game", nil) -- Title, Image
 local GameSection = GameTab:CreateSection("Dead")
