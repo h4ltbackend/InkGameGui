@@ -114,6 +114,18 @@ pl.CFrame = location
 })
 
 local Button = OpTab:CreateButton({
+   Name = "Teleport To Dalgona Waiting Room",
+   Callback = function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(746.510132, 130.33017, -139.416397, 0.998980701, -1.51720077e-11, 0.0451398976, 1.49107567e-11, 1, 6.12428294e-12, -0.0451398976, -5.44497e-12, 0.998980701)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+   end,
+})
+
+local Button = OpTab:CreateButton({
    Name = "Finish Dalgona",
    Callback = function()
 local args = {
