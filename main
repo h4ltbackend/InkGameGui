@@ -157,7 +157,7 @@ local Button = OpTab:CreateButton({
    Name = "Anti Night Kill",
    Callback = function()
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-local location = CFrame.new(198.680603, 82.953125, -93.7369232, -0.940027237, -1.00791283e-07, 0.341099322, -9.63780167e-08, 1, 2.98837257e-08, -0.341099322, -4.78295981e-09, -0.940027237)
+local location = CFrame.new(307.002014, 55.0713959, -244.242661, -0.00152742863, 6.45671889e-08, 0.999998808, -7.72652697e-08, 1, -6.46852811e-08, -0.999998808, -7.73639783e-08, -0.00152742863)
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 wait(0.1)
