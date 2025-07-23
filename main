@@ -128,12 +128,20 @@ pl.CFrame = location
 local Button = OpTab:CreateButton({
    Name = "Finish Dalgona",
    Callback = function()
-local args = {
-	{
-		Completed = true
-	}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DALGONATEMPREMPTE"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DALGONATEMPREMPTE"):FireServer(Completed = true)
+   end,
+})
+
+local Button = OpTab:CreateButton({
+   Name = "Finish Jump Rope",
+   Callback = function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(745.088928, 197.144073, 921.333557, -0.0230822545, 1.99164618e-09, 0.999733567, 1.36036515e-08, 1, -1.67809022e-09, -0.999733567, 1.35612934e-08, -0.0230822545)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
    end,
 })
 
